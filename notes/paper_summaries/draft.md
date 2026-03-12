@@ -1,3 +1,3 @@
 This folder will contain below files:
 
-<!-- One .md file per referenced paper -->
+--> One .md file per referenced paper
