@@ -3,7 +3,7 @@
 "INSERT TEAM NAME"\
 Arda Yazici\
 Jodhveer Atwal\
-Khushi Malik\ - kelsiei
+Khushi Malik\ - kelsiei\
 Mary Klassen\
 Victor Mai\
 
@@ -12,7 +12,7 @@ https://github.com/kelsiei/team-4-wireless-project
 
 ## 3. Candidate References
 
-* **Security risks and countermeasures of adversarial attacks on AI-driven applications in 6G networks: A survey**
+* **Security risks and countermeasures of adversarial attacks on AI-driven applications in 6G networks: A survey** - Khushi
     * [Link](https://www.researchgate.net/publication/384161068_Security_risks_and_countermeasures_of_adversarial_attacks_on_AI-driven_applications_in_6G_networks_A_survey)
     * ML threats specific to 6G intelligence and corresponding defense frameworks.
 
