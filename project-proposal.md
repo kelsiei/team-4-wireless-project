@@ -4,7 +4,7 @@
 Arda Yazici\
 Jodhveer Atwal\
 Khushi Malik - kelsiei\
-Mary Klassen\
+Mary Klassen.\
 Victor Mai\
 
 Security Threats and AI Defenses in 6G\
