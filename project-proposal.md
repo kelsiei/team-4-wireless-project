@@ -3,7 +3,7 @@
 "INSERT TEAM NAME"\
 Arda Yazici\
 Jodhveer Atwal\
-Khushi Malik\
+Khushi Malik\ - kelsiei
 Mary Klassen\
 Victor Mai\
 
