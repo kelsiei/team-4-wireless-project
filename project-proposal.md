@@ -1,14 +1,16 @@
 # Team 4 - Wireless Network Project
 
 "INSERT TEAM NAME"\
-Arda Yazici\
-Jodhveer Atwal\
+Arda Yazici - Snowcactus\
+Jodhveer Atwal - jatwal27\
 Khushi Malik - kelsiei\
-Mary Klassen.\
-Victor Mai\
+Mary Klassen - MustangKoschei\
+Victor Mai - lugioo\
 
 Security Threats and AI Defenses in 6G\
 https://github.com/kelsiei/team-4-wireless-project
+
+Justification: As 6G moves toward a "Native AI" architecture where network functions like routing and resource allocation are managed by machine learning, the attack surface expands significantly. Traditional security models are insufficient for 6G's decentralized nature. This project explores the "cat-and-mouse" game of adversarial ML—specifically data poisoning—and evaluates how Zero-Trust Architectures (ZTA) can leverage AI for continuous verification. By analyzing these defenses, we aim to understand how 6G networks can remain resilient even when the underlying AI models are under active subversion
 
 ## 3. Candidate References
 
