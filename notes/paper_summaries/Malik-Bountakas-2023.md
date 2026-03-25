@@ -1,1 +1,2 @@
-
+**Summary**
+This paper studies defense strategies in adversial machine learning and points out that most past research has focused more on creating attacks than on stopping them. The authors review existing defense methods across cybersecurity, computer vision, natural language processing and audio and organize them into two main groups: mitigation and detection. The paper shows the most current defenses are narrow and do not work well across different attacks or domains. It also finds that many studies do not share enough code or data, which makes results harder to compare and reproduce.
