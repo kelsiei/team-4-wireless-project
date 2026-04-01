@@ -1,0 +1,18 @@
+What is 6G and what its gonna be
+•	6G huge shift from 5G.
+•	Need 1 Tbps speeds and millions of IoT devices per km2.
+•	Ground and satellite systems together for global coverage.
+•	Move to O-RAN architecture.
+•	Old way was locked hardware/software from one vendor.
+•	O-RAN splits hardware and software so different vendors work together.
+•	AI runs the network using controllers.
+•	xApps for fast tasks and rApps for long tasks.
+•	Apps automate resource stuff and signal beam routing.
+
+Networks no longer behind wall
+•	Open design is flexible but has bad security.
+•	Old security used castle and moat where inside was safe.
+•	6G has virtual cloud and too many devices so no physical boundary.
+•	Attackers use weak IoT to get in and move around.
+
+
