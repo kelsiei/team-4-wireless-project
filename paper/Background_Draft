@@ -15,4 +15,26 @@ Networks no longer behind wall
 •	6G has virtual cloud and too many devices so no physical boundary.
 •	Attackers use weak IoT to get in and move around.
 
+AML Threats
+•	AI controls network so ML models are the targets.
+•	New field called adversarial machine learning or AML.
+•	Evasion attack: add tiny noise to data during use.
+•	Noise tricks model into making errors like bad signal calc.
+•	Data poisoning: secretly change data used to train AI.
+•	Clean label attack: poisoned data looks normal to humans but breaks AI logic.
+
+Zero Trust and AI Defense
+•	Network wall failed so 6G needs Zero Trust Architecture.
+•	Rule: no user or device trusted by default.
+•	Every request checked based on behavior and context.
+•	Checking millions of devices in ms impossible with old rules.
+•	Use AI as core trust algorithm for speed.
+•	ML monitors habits and traffic for dynamic trust scores.
+
+Explainable AI 
+•	AI is black box so reasoning is hidden.
+•	Admins need to know why a connection was blocked.
+•	Explainable AI frameworks decode the complex models.
+•	Helps operators trust the automation and fix the system.
+
 
