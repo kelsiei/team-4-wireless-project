@@ -1,6 +1,6 @@
 Arda Yazici Paper 2 Summary
 
-Full Citation: [Lujia Liang and Lei Zhang. "Security and Privacy in O-RAN for 6G: A Comprehensive Review of Threats and Mitigation Approaches." arXiv, 2026. https://arxiv.org/pdf/2401.14780]
+Full Citation: [Lujia Liang and Lei Zhang. "Security and Privacy in O-RAN for 6G: A Comprehensive Review of Threats and Mitigation Approaches." arXiv, 2026. https://arxiv.org/pdf/2603.21211]
 
 Summary
 
