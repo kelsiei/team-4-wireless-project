@@ -1,6 +1,6 @@
 Arda Yazici Paper 1 Summary
 
-Full Citation: [Xu Chen, Wei Feng, Ning Ge, and Yan Zhang. Zero Trust Architecture for 6G Security. IEEE Network, 2024. 10.1109/MNET2023-3325355] 
+Full Citation: [Xu Chen, Wei Feng, Ning Ge, and Yan Zhang. Zero Trust Architecture for 6G Security. arXiv, 2022. (https://arxiv.org/pdf/2203.07716)] 
 
 Summary
 
