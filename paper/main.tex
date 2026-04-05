@@ -1,6 +1,6 @@
-%File: anonymous-submission-latex-2026.tex
+%File: main.tex
 \documentclass[letterpaper]{article} % DO NOT CHANGE THIS
-\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{aaai2026}
 \usepackage{times}  % DO NOT CHANGE THIS
 \usepackage{helvet}  % DO NOT CHANGE THIS
 \usepackage{courier}  % DO NOT CHANGE THIS
@@ -91,38 +91,23 @@
 % nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
 % articles, conjunctions, and prepositions are lower case unless they
 % directly follow a colon or long dash
-\title{AAAI Press Anonymous Submission\\Instructions for Authors Using \LaTeX{}}
+\title{Security Threats and AI Defenses in 6G\\\LaTeX{}}
 \author{
     %Authors
     % All authors must be in the same font size and format.
     Written by AAAI Press Staff\textsuperscript{\rm 1}\thanks{With help from the AAAI Publications Committee.}\\
     AAAI Style Contributions by Pater Patel Schneider,
-    Sunil Issar,\\
-    J. Scott Penberthy,
-    George Ferguson,
-    Hans Guesgen,
-    Francisco Cruz\equalcontrib,
-    Marc Pujol-Gonzalez\equalcontrib
+    Jodhveer Atlwal,\\
+    Khushi Malik,
+    Mary Klassen,
+    Arda Yazici,
+    Victor Mai
 }
-\affiliations{
-    %Afiliations
+\date{
     \textsuperscript{\rm 1}Association for the Advancement of Artificial Intelligence\\
-    % If you have multiple authors and multiple affiliations
-    % use superscripts in text and roman font to identify them.
-    % For example,
-
-    % Sunil Issar\textsuperscript{\rm 2},
-    % J. Scott Penberthy\textsuperscript{\rm 3},
-    % George Ferguson\textsuperscript{\rm 4},
-    % Hans Guesgen\textsuperscript{\rm 5}
-    % Note that the comma should be placed after the superscript
-
     1101 Pennsylvania Ave, NW Suite 300\\
     Washington, DC 20004 USA\\
-    % email address must be in roman text type, not monospace or sans serif
     proceedings-questions@aaai.org
-%
-% See more examples next
 }
 
 %Example, Single Author, ->> remove \iffalse,\fi and place them surrounding AAAI title to use it
@@ -131,10 +116,9 @@
 \author {
     Author Name
 }
-\affiliations{
-    Affiliation\\
-    Affiliation Line 2\\
-    name@example.com
+\date{
+    Kwantlen Polytechnic University\\
+    Surrey, British Columbia, Canada\\
 }
 \fi
 
@@ -166,8 +150,31 @@
 \maketitle
 
 \begin{abstract}
-AAAI creates proceedings, working notes, and technical reports directly from electronic source furnished by the authors. To ensure that all papers in the publication have a uniform appearance, authors must adhere to the following instructions.
+This paper surveys security threats and AI-based defense strategies in emerging 6G networks. As 6G systems increasingly rely on artificial intelligence for autonomous decision-making, resource management, and network optimization, they also introduce new attack surfaces such as adversarial evasion, poisoning, privacy leakage, and model manipulation.
 \end{abstract}
+
+\section{Literature Review}
+
+%%% -----------------------------------------------------
+%%% SECTION: Literature Review
+%%% AUTHOR : Khushi (@your-github)
+%%% -----------------------------------------------------
+
+\subsection{Adversarial ML Threats and Defenses}
+
+Recent research shows that artificial intelligence is becoming central to 6G because it helps future wireless networks adapt more quickly, automate decision-making, and manage increasingly complex environments. At the same time, this shift expands the security problem: attackers can now target not only network infrastructure, but also the machine-learning models that guide network behavior. Broad adversarial machine learning surveys show that evasion and poisoning attacks remain major concerns, while 6G-focused work argues that AI-enabled optimization introduces new risks in areas such as access control, resource allocation, and autonomous network management. As a result, security in 6G must be studied as both a networking problem and a learning-system problem.
+
+This concern becomes more concrete in 6G-specific architectures that rely on distributed intelligence and open control frameworks. In AI-enabled 6G, federated learning is often proposed to support large-scale model training while reducing raw-data sharing, but this also creates risks such as cheating attacks, low-quality local model training, and privacy-stealing attacks. Similar concerns appear in O-RAN-based cellular systems, where machine-learning xApps inside the near-real-time RAN Intelligent Controller can be manipulated through adversarial inputs. Experimental work in this area shows that attacks on spectrogram- and performance-metric-based models can sharply reduce model accuracy, while defense mechanisms such as distillation can improve robustness under real-time constraints. Together, these studies suggest that 6G defenses must be domain-aware, fast enough for operational deployment, and robust against attacks aimed directly at learning pipelines.
+
+Although existing work identifies important threats, the defense landscape is still fragmented. General adversarial machine learning surveys describe broad categories of proactive and reactive defenses, but these methods are often evaluated outside realistic wireless environments. In contrast, wireless-focused studies propose more domain-specific protections for signal classifiers and AI-driven radio intelligence, yet they are usually tested in narrower settings. This creates a gap between theory and deployment, because a defense that performs well in a controlled experiment may not remain effective under dynamic channel conditions, open-radio architectures, or latency-sensitive decision pipelines.
+
+Overall, the literature suggests that security for AI-driven 6G remains an open problem rather than a solved one. Current studies provide useful building blocks for robustness, poisoning resistance, and trust-aware design, but they do not yet offer a unified defense framework that is scalable, explainable, and practical for real-time 6G systems. This gap motivates the need for future work that combines adversarial robustness, secure distributed learning, and operationally realistic defense strategies.
+
+%%% END SECTION: Literature Review
+% Para 3
+% Para 4
+
+%%% END SECTION: Literature Review
 
 % Uncomment the following to link to your code, datasets, an extended version or similar.
 % You must keep this block between (not within) the abstract and the main body of the paper.
