@@ -176,6 +176,15 @@ Although existing work identifies important threats, the defense landscape is st
 
 Overall, the literature suggests that security for AI-driven 6G remains an open problem rather than a solved one. Current studies provide useful building blocks for robustness, poisoning resistance, and trust-aware design, but they do not yet offer a unified defense framework that is scalable, explainable, and practical for real-time 6G systems. This gap motivates the need for future work that combines adversarial robustness, secure distributed learning, and operationally realistic defense strategies.
 
+
+%%% -----------------------------------------------------
+%%% SECTION : Literature Review
+%%% AUTHOR  : Mary (@MustangKoschei)
+%%% -----------------------------------------------------
+\subsection{Adversarial Risks}
+
+The transition to 6G intelligence significantly expands the network's attack surface, as security threats now target not only the physical infrastructure but also the machine-learning models governing network behavior. One prominent 6G-specific risk is adversarial beam manipulation in the physical layer, where techniques like the Fast Gradient Sign Method (FGSM) are used to inject calculated noise into radio frequency data. This can deceive base stations into misdirecting signals, causing connections to drop or data rates to plummet without triggering traditional security alarms. Furthermore, 6G's reliance on training data makes it highly vulnerable to "clean-label" poisoning attacks, where attackers subtly modify the features of training samples while keeping their labels consistent. These attacks are exceptionally difficult to detect because the malicious data appears visually and logically correct, yet it forces the model to misclassify specific targets during operation. In network-assisted IoT environments, these adversarial tactics have been shown to be more effective and damaging than traditional jamming at equivalent power levels. 
+
 %%% END SECTION: Literature Review
 % Para 3
 % Para 4
