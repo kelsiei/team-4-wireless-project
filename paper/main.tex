@@ -273,13 +273,14 @@ This section proposes a layered framework that secures 6G AI systems across thre
 
 
 %%% -----------------------------------------------------
-%%% SECTION : Literature Review
+%%% SECTION : Conclusion
 %%% AUTHOR  : Mary (@MustangKoschei)
 %%% -----------------------------------------------------
 \section{Conclusion}
-
-
-
+The transition to 6G marks a fundamental shift from human-managed connectivity to AI-native, "Zero-Touch" networking, where artificial intelligence autonomously handles critical functions, like resource allocation and network management(Suomalainen et al. 2025). However, as this report has established, this heavy reliance on AI creates a dangerous attack surface where the learning systems themselves become the primary targets for manipulation(Kumar et al. 2026). 
+The research highlights that 6G-specific architectures are vulnerable to AML tactics that can have physical consequences. These risks include adversarial beam manipulation in the physical layer, and "clean-label" poisoning attacks, which can subtly alter model logic while appearing legitimate to human reviewers. These threats are particularly notable in O-RAN environments, where the Near-Real-Time RIC and its associated xApps serve as high-risk targets for adversarial manipulation (Catak et al. 2024).
+To address these risks, this paper proposes a lifecycle-based Three Phase Defense framework. This includes targeting the data, the model, and the decisions it produces. First by securing the data by filtering out poisoned inputs before they reach the model. Next, securing the AI by utilizing adversarial training and stress-testing to ensure models remain robust against evasion attacks during real-time operation. And finally, securing the decisions by using ZTA with Explainable AI techniques like SHAP and LIME to provide the transparency needed for continuous verification and auditing(Kumar et al. 2026).
+Significant challenges remain regarding the computational overhead and processing latency introduced by these complex AI defenses(Wang et al. 2021). Many current solutions remain theoretical and have yet to be validated against the dynamic channel conditions of real-world 6G deployments. Addressing these gaps remains essential to realizing the vision of a resilient, self-healing, and secure 6G network.
 
 \section{Preparing an Anonymous Submission}
 
