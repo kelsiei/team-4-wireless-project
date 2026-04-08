@@ -1,4 +1,4 @@
-# Paper Summary - Security risks and countermeasures of adversarial attacks on AI-driven applications in 6G networks: A survey 
+# Paper Summary - Comprehensive analysis on 5G and 6G wireless network security and privacy 
   Full Citation: Rajesh, K., and P. Vetrivelan. "Comprehensive analysis on 5G and 6G wireless network security and privacy." Telecommunication Systems 88 (2025): 52.
                                                                                                                                                                                                                   
   ## Summary
