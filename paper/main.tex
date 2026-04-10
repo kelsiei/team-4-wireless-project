@@ -259,6 +259,15 @@ Technical trends also include the development of the "De-Pois" system, which emp
 
 \section{Discussion}
 
+%%% -----------------------------------------------------
+%%% SECTION: Discussion
+%%% AUTHOR : Victor (@lugioo)
+%%% -----------------------------------------------------
+
+Across the reviewed literature, a consistent theme emerges: as 6G networks delegate critical functions to AI, the attack surface shifts from physical infrastructure to the machine learning models that govern it. Across all reviewed works, adversarial threats such as evasion attacks, clean-label data poisoning and adversarial beam manipulation emerge as defining security challenges of the 6G era. What sets these threats apart from traditional cyberattacks is their ability to evade detection entirely, as malicious inputs can appear fully legitimate to human auditors. As a result, conventional monitoring approaches appear insufficient.
+
+A recurring theme in the defense literature is that reliance on any single protection mechanism leaves critical vulnerabilities unaddressed. Kumar et al. argue for layered architectures that organize defenses across physical, distributed ledger and AI-enabled tiers. This view is reinforced by other works: Xu et al.'s federated learning framework addresses data privacy but still requires trust evaluation and incentive mechanisms to handle malicious participants, while Chiejina et al.'s distillation based approach for O-RAN xApps protects inference pipelines but leaves training time threats unaddressed. Similarly, the De-Pois GAN framework and Zero Trust Architecture each address distinct parts of the problem. Taken together, the literature suggests that robust 6G security is not a matter of selecting a single best defense, but of understanding how complementary mechanisms cover one another's blind spots across the full stack.
+
 \section{Proposed Idea}
 
 %%% -----------------------------------------------------
