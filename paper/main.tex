@@ -160,21 +160,28 @@ This paper surveys security threats and AI-based defense strategies in emerging 
 %%% AUTHOR : Jodhveer (@Jatwal27)
 %%% -----------------------------------------------------
 
-\subsection{The Evolution Toward 6G and O-RAN}
+The shift from 5G to 6G represents a significant evolution in how global connectivity is designed. While 5G improved throughput, latency, and network virtualization, 6G aims to extend connectivity across integrated terrestrial, aerial, and satellite networks to enable three-dimensional coverage \cite{kaur2025}. By linking ground infrastructure with non-terrestrial systems, 6G seeks to reduce connectivity gaps across geographic regions. This architecture allows devices to dynamically transition between terrestrial towers and satellite systems. Research visions for 6G propose peak data rates approaching 1 Tbps and support for up to $10^6$ IoT devices per $\text{km}^2$ \cite{kaur2025}.
 
-Rough citations, IEEE will be done for final copy
-
-The shift from 5G to 6G represents a significant evolution in how global connectivity is designed. While 5G improved throughput, latency, and network virtualization, 6G aims to extend connectivity across integrated terrestrial, aerial, and satellite networks to enable three-dimensional coverage (Kaur and Gupta 2025) . By linking ground infrastructure with non-terrestrial systems, 6G seeks to reduce connectivity gaps across geographic regions. This architecture allows devices to dynamically transition between terrestrial towers and satellite systems. Research visions for 6G propose peak data rates approaching 1 Tbps and support for up to $10^6$ IoT devices per $KM^2$ (Kaur and Gupta 2025).
-
-To support networks of this scale, the telecommunications industry is moving toward Open Radio Access Network (O-RAN) architectures. Traditionally, network hardware and software were tightly coupled and typically supplied by a single vendor. O-RAN introduces standardized interfaces that allow operators to deploy interoperable components from multiple vendors, increasing flexibility while also introducing new security considerations (Kaur and Gupta 2025) . Within this architecture, artificial intelligence assists network management through the RAN Intelligent Controller (RIC). Near-real-time applications called xApps handle short-term operational tasks such as signal optimization, while rApps support longer-term network management and policy decisions.
+To support networks of this scale, the telecommunications industry is moving toward Open Radio Access Network (O-RAN) architectures. Traditionally, network hardware and software were tightly coupled and typically supplied by a single vendor. O-RAN introduces standardized interfaces that allow operators to deploy interoperable components from multiple vendors, increasing flexibility while also introducing new security considerations \cite{kaur2025}. Within this architecture, artificial intelligence assists network management through the RAN Intelligent Controller (RIC). Near-real-time applications called xApps handle short-term operational tasks such as signal optimization, while rApps support longer-term network management and policy decisions.
 
 \subsection{AML Threats in AI-Driven Networks}
 
-Because artificial intelligence plays a central role in managing 6G networks, the machine learning (ML) models themselves become potential targets for attackers (Catak et al. 2021) . Adversarial Machine Learning (AML) studies how malicious actors manipulate ML systems to disrupt automated decision making.
+Because artificial intelligence plays a central role in managing 6G networks, the machine learning (ML) models themselves become potential targets for attackers \cite{Catak_Catak_Moldsvor_2021}. Adversarial Machine Learning (AML) studies how malicious actors manipulate ML systems to disrupt automated decision making.
 
-One common technique is the evasion attack, where attackers introduce small disruptions into input data during inference to cause incorrect predictions. These disruptions exploit the sensitivity of ML models and can lead to incorrect outputs without altering the training data (Catak et al. 2021) . In network environments, this may result in misclassification of traffic patterns or incorrect resource allocation.
+One common technique is the evasion attack, where attackers introduce small disruptions into input data during inference to cause incorrect predictions. These disruptions exploit the sensitivity of ML models and can lead to incorrect outputs without altering the training data \cite{Catak_Catak_Moldsvor_2021}. In network environments, this may result in misclassification of traffic patterns or incorrect resource allocation.
 
-Another major threat is data poisoning, in which attackers manipulate the training data used to build ML models. By injecting malicious samples, attackers can alter the learned decision boundaries and hurt model performance (Chen et al. 2021) . A well-known example is the clean-label poisoning attack, where malicious samples appear legitimate to human reviewers but introduce hidden patterns that trigger incorrect model behavior after deployment (Shafahi et al. 2018) .
+Another major threat is data poisoning, in which attackers manipulate the training data used to build ML models. By injecting malicious samples, attackers can alter the learned decision boundaries and hurt model performance \cite{Chen_Zhang_Zhang_Wang_Liu_2021}. A well-known example is the clean-label poisoning attack, where malicious samples appear legitimate to human reviewers but introduce hidden patterns that trigger incorrect model behavior after deployment \cite{NEURIPS2018_22722a34}.
+
+\subsection{Zero Trust Security and Explainable AI in 6G Networks}
+
+The open and software-driven design of 6G networks fundamentally changes how security is implemented. Traditional network security relied on a perimeter-based approach in which internal systems were assumed to be trusted. However, 6G networks are highly distributed across cloud infrastructure, edge devices, satellites, and billions of connected devices, making a single security boundary impractical \cite{kaur2025}. 
+
+To address this challenge, many 6G security models adopt Zero Trust Architecture (ZTA), where no device or user is trusted by default. Every request must be continuously verified based on identity, behavior, and context \cite{ali2025, kaur2025}. Given the scale and complexity of 6G environments, AI-driven monitoring is essential for analyzing traffic patterns and detecting anomalies in real time.
+
+At the same time, the increasing reliance on machine learning introduces the need for transparency in automated decisions. Many ML models operate as complex ``black boxes,'' making it difficult to understand why specific actions are taken. This lack of transparency can weaken trust and hinder effective security management. Explainable Artificial Intelligence (XAI) addresses this issue by providing interpretable insights into model behavior \cite{kaur2025}.
+
+Common XAI techniques include SHAP, which quantifies the contribution of each feature to a prediction, and LIME, which explains individual predictions using local approximations of the model. These methods help administrators audit AI decisions, detect abnormal behavior, and improve trust in AI-driven network security systems \cite{kaur2025}.
+
 
 \subsection{Zero Trust Security and Explainable AI in 6G Networks}
 
@@ -185,6 +192,7 @@ At the same time, the increasing reliance on machine learning introduces the nee
 
 Common XAI techniques include SHAP, which quantifies the contribution of each feature to a prediction, and LIME, which explains individual predictions using local approximations of the model. These methods help administrators audit AI decisions, detect abnormal behaviour, and improve trust in AI-driven network security systems (Kaur and Gupta 2025) .
 
+\section{Literature Review}
 
 %%% -----------------------------------------------------
 %%% SECTION: Literature Review
@@ -217,24 +225,28 @@ Overall, the literature suggests that security for AI-driven 6G remains an open 
 
 \section{Proposed Idea}
 
+\section{Proposed Idea}
+
 %%% -----------------------------------------------------
 %%% SECTION: Proposed Idea
 %%% AUTHOR : Jodhveer (@Jatwal27)
 %%% -----------------------------------------------------
 
-6G and O-RAN architectures rely heavily on artificial intelligence to automatically manage network operations. While this improves efficiency, it also introduces security risks. Machine learning models can be manipulated through adversarial inputs or poisoned data, leading to incorrect decisions that may spread across the network (Catak et al. 2021; Chen et al. 2021).
+6G and O-RAN architectures rely heavily on artificial intelligence to automatically manage network operations. While this improves efficiency, it also introduces security risks. Machine learning models can be manipulated through adversarial inputs or poisoned data, leading to incorrect decisions that may spread across the network \cite{Catak_Catak_Moldsvor_2021, Chen_Zhang_Zhang_Wang_Liu_2021}.
 
-Existing defenses are largely perimeter-based and focus on detecting threats at the network entry point. However, this creates a single point of failure, as attacks that bypass initial detection can directly impact AI-driven decision making. Given the distributed and software-based nature of 6G systems, a lifecycle-based defense approach is needed to protect AI across all stages of operation rather than relying on a single checkpoint (Ali 2025; Chen et al. 2023).
+Existing defenses are largely perimeter-based and focus on detecting threats at the network entry point. However, this creates a single point of failure, as attacks that bypass initial detection can directly impact AI-driven decision making. Given the distributed and software-based nature of 6G systems, a lifecycle-based defense approach is needed to protect AI across all stages of operation rather than relying on a single checkpoint \cite{Chen_Zhang_Zhang_Wang_Liu_2021}.
 
 \subsection {Three Phase Defense}
 
 This section proposes a layered framework that secures 6G AI systems across three stages: data, language model, and decision making.
 
 \subsection {Securing the Data}
-\subsection {Securing the AI}
-\subsection {Securing the Decisions}
 
+The first phase focuses on protecting data before it reaches the model. Incoming data is passed through a filtering stage that acts as a clean room, where a lightweight validation mechanism checks for signs of poisoning or abnormal patterns. This can be implemented using anomaly detection or statistical validation techniques to identify suspicious inputs and remove them before they affect the model \cite{Chen_Zhang_Zhang_Wang_Liu_2021}.
 
+Some attacks are more difficult to detect because the data appears normal. Clean-label poisoning demonstrates that correctly labeled samples can still manipulate model behaviour during inference \cite{NEURIPS2018_22722a34}. To address this, an additional validation step can be used where a secondary model compares predictions and identifies inconsistencies between clean and potentially poisoned data. This approach is similar to De-Pois, where a mimic model is used to detect poisoned samples based on differences in model behaviour \cite{Chen_Zhang_Zhang_Wang_Liu_2021}.
+
+This phase is especially important in 6G environments due to the large volume of data generated by IoT devices and distributed network components.
 \section{Preparing an Anonymous Submission}
 
 This document details the formatting requirements for anonymous submissions. The requirements are the same as for camera ready papers but with a few notable differences:
