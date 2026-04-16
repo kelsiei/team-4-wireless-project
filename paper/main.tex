@@ -173,6 +173,8 @@ A significant portion of our analysis is dedicated to emerging defense framework
 
 The transition to 6G introduces a degree of openness and heterogeneity that renders traditional "castle-and-moat" security perimeters obsolete. As established in recent studies on Software-Defined Zero Trust Architecture (ZTA), the 6G ecosystem must move toward a decentralized access control regime. This model treats network control domains as "communities," using adaptive collaboration to mitigate large-scale threats such as Distributed Denial of Service (DDoS) attacks and zero-day exploits that leverage the increased use of open-source software in 6G network entities.
 
+A critical vulnerability exists within the Open Radio Access Network (O-RAN) architecture. While O-RAN promotes vendor interoperability, it also introduces new forward interfaces (like the E2 and A1 interfaces) that are susceptible to adversarial manipulation. Research into O-RAN security for 6G highlights that the Near-Real-Time RAN Intelligent Controller (Near-RT RIC) is a high-risk target. Attackers can potentially exploit the xApps and rApps that manage network optimization. To counter this, O-RAN standards are evolving to include PKI-based mTLS for the management plane and AI-driven anomaly detection to secure internal API communications.
+
 
 %%% -----------------------------------------------------
 %%% SECTION: Literature Review
