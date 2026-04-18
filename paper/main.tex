@@ -177,6 +177,12 @@ A critical vulnerability exists within the Open Radio Access Network (O-RAN) arc
 
 Furthermore, the integration of 6G-IoT networks requires a shift toward AI-based Intrusion Detection Systems (IDS) that prioritize privacy. Current proposals suggest using an AIBID-SCSA (AI-Based Intrusion Detection and Secure Communication) technique, which employs algorithms like the Improved Sparrow Search Algorithm (ISSA) to format and recognize attack patterns across dense IoT clusters. By leveraging Federated Learning (FL), these systems can train on distributed edge nodes, allowing the network to recognize dynamic cyber-attacks without exposing raw user data to the central cloud. This ensures that 6G communication remains "zero-touch" while maintaining strict data confidentiality.
 
+\subsection{Adversarial Machine Learning and Data Poisoning Threats \& Proactive AI-Driven Mitigations}
+
+A primary concern for 6G security is the vulnerability of the underlying Machine Learning (ML) models to data poisoning. Unlike traditional cyberattacks that target software bugs, poisoning attacks target the "logic" of the network. As demonstrated in the "Poison Frogs!" study, clean-label poisoning allows attackers to inject malicious samples into training sets without altering the labels. This is particularly dangerous for 6G because the data remains visually and logically consistent, making it nearly impossible for manual audits to detect. In a 6G context, an attacker could subtly feed altered data into a network’s training set to force the model to misclassify specific traffic as "safe" during the operational phase.
+
+
+
 %%% -----------------------------------------------------
 %%% SECTION: Literature Review
 %%% AUTHOR : Khushi (@your-github)
