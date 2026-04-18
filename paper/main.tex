@@ -183,6 +183,8 @@ A primary concern for 6G security is the vulnerability of the underlying Machine
 
 The impact of these attacks extends to the physical layer of the network. Research into mmWave Beam Prediction shows that adversarial attacks, such as the Fast Gradient Sign Method (FGSM), can manipulate radio frequency data. By adding a small amount of calculated noise to a signal, an attacker can trick a 6G base station into misdirecting its beams. This results in dropped connections and severe latency, proving that adversarial ML is not merely a software vulnerability but a direct threat to 6G physical connectivity.
 
+To counter these evolving threats, the literature suggests a shift toward attack-agnostic defense systems. The De-Pois framework represents a significant advancement in this area by utilizing Generative Adversarial Networks (GANs) to establish a "clean" baseline of data distribution. By comparing real-time training samples against this GAN-generated baseline, the system can filter out malicious data without needing prior knowledge of the specific attack type. This is a crucial defense for 6G’s autonomous policy-making models, ensuring that routing and security protocols remain uncompromised.
+
 
 
 %%% -----------------------------------------------------
