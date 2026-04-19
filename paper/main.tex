@@ -91,7 +91,7 @@
 % nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
 % articles, conjunctions, and prepositions are lower case unless they
 % directly follow a colon or long dash
-\title{Security Threats and AI Defenses in 6G\\\LaTeX{}}
+\title{Security Threats and AI Defenses in 6G}
 \author{
     %Authors
     % All authors must be in the same font size and format.
@@ -135,12 +135,6 @@
 }
 \fi
 
-
-% REMOVE THIS: bibentry
-% This is only needed to show inline citations in the guidelines document. You should not need it and can safely delete it.
-\usepackage{bibentry}
-% END REMOVE bibentry
-
 \begin{document}
 
 \maketitle
@@ -155,7 +149,7 @@ The transition from 5G to 6G represents a fundamental shift from human-managed c
 
 This report explores the security landscape of AI-enabled 6G networks through a multi-layered lens. We begin by establishing the technical background of 6G and O-RAN, specifically focusing on how adversarial machine learning (AML) including data poisoning and evasion attacks---can disrupt intelligent wireless networking. We then provide a comprehensive literature review covering a broad spectrum of adversarial risks, from specific wireless attack scenarios to the evolving trends in countermeasures.
 
-A significant portion of our analysis is dedicated to emerging defense frameworks. We investigate the transition toward a Zero Trust Architecture (ZTA), where "implicit trust" is replaced by continuous AI-based verification of identity and communication. Furthermore, we discuss the implementation of Explainable AI (XAI) and layered defenses to secure the 6G-IoT ecosystem. By comparing current defense strategies and identifying existidng research gaps, this paper aims to define a path toward a resilient, self-healing, and secure 6G infrastructure.
+A significant portion of our analysis is dedicated to emerging defense frameworks. We investigate the transition toward a Zero Trust Architecture (ZTA), where "implicit trust" is replaced by continuous AI-based verification of identity and communication. Furthermore, we discuss the implementation of Explainable AI (XAI) and layered defenses to secure the 6G-IoT ecosystem. By comparing current defense strategies and identifying existing research gaps, this paper aims to define a path toward a resilient, self-healing, and secure 6G infrastructure.
 
 \section{Background}
 
@@ -213,9 +207,6 @@ To counter these evolving threats, the literature suggests a shift toward attack
 
 However, the integration of these defenses is not without challenges. While AI-driven security is necessary to handle the complexity of 6G resource management, it introduces a "double-edged sword" scenario. Advanced models like De-Pois or layered security frameworks require significant computational power, which could introduce unwanted latency or exhaust the battery life of small IoT devices. Furthermore, many of these AI-based security measures remain in the early research phase and have yet to be tested against the high-speed, dynamic environment of a real-world 6G deployment.
 
-
-
-\section{Literature Review}
 
 %%% -----------------------------------------------------
 %%% SECTION: Literature Review
@@ -283,7 +274,7 @@ A recurring theme in the defense literature is that reliance on any single prote
 
 However, significant gaps still remain. First, almost all proposed frameworks are evaluated in controlled or simulated environments and none have been validated against the dynamic, high speed conditions of real world deployment. The jump from benchmark accuracy, such as the 97 to 99 percent intrusion detection rates cited by Kumar et al., to operational performance under adversarial real time conditions is challenging and largely unaddressed in the current literature. Second, many advanced defenses, particularly GAN based systems and federated learning pipelines incorporating differential privacy, carry high computational overhead. This poses a direct conflict with 6G's ultra low latency requirements and the resource constraints of IoT edge devices operating at the network boundary. Third, while Explainable AI (XAI) techniques such as SHAP and LIME are proposed to improve transparency and trust in AI driven security decisions, their integration into real time network management remains limited throughout the reviewed works. XAI is treated more as a desirable design property than a concretely deployed and evaluated mechanism.
 
-Overall, the field lacks a unified defense framework that is simultaneously scalable, explainable and deployable in real time. Current proposals address subsets of these requirements in isolation from one another. Bridging this gap, particularly through work that combines adversarial robustness, secure distributed learning and operational practicality represents, the most critical priority for future 6G security research.
+Overall, the field lacks a unified defense framework that is simultaneously scalable, explainable and deployable in real time. Current proposals address subsets of these requirements in isolation from one another. Bridging this gap, particularly through work that combines adversarial robustness, secure distributed learning and operational practicality, represents the most critical priority for future 6G security research.
 
 
 
@@ -301,7 +292,7 @@ Existing defenses are largely perimeter-based and focus on detecting threats at 
 
 \subsection {Three Phase Defense}
 
-This section proposes a layered framework that secures 6G AI systems across three stages: data, language model, and decision making.
+This section proposes a layered framework that secures 6G AI systems across three stages: data, model, and decision making.
 
 \subsection {Securing the Data}
 
