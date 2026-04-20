@@ -30,9 +30,6 @@ In 6G networks, AI will automatically handle critical tasks like directing data 
 - arXiv:2402.06846  
   https://arxiv.org/abs/2402.06846
 
-- arXiv:2311.18820  
-  https://arxiv.org/abs/2311.18820
-
 ### Jodhveer
 - De-Pois: An attack-agnostic defense against data poisoning attacks  
   https://www.chenwang.net.cn/publications/De-Pois-TIFS21.pdf
