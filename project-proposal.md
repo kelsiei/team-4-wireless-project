@@ -47,13 +47,16 @@ In 6G networks, AI will automatically handle critical tasks like directing data 
 - Security risks and countermeasures of adversarial attacks on AI-driven applications in 6G networks: A survey  
   https://www.researchgate.net/publication/384161068_Security_risks_and_countermeasures_of_adversarial_attacks_on_AI-driven_applications_in_6G_networks_A_survey
 
-- https://www.sciencedirect.com/science/article/pii/S0167739X24004643
+- Cybersecurity for tactical 6G networks: Threats, architecture, and intelligence
+  https://www.sciencedirect.com/science/article/pii/S0167739X24004643
 
-- https://www.sciencedirect.com/science/article/abs/pii/S1389128622003929
+- Intelligent zero trust architecture for 5G/6G networks: Principles, challenges, and the role of machine learning in the context of O-RAN
+  https://www.sciencedirect.com/science/article/abs/pii/S1389128622003929
 
-- https://link.springer.com/article/10.1007/s11235-025-01282-2
+- Comprehensive analysis on 5G and 6G wireless network security and privacy  
+  https://link.springer.com/article/10.1007/s11235-025-01282-2
 
-- https://www.sciencedirect.com/science/article/abs/pii/S108480452400208X
+
 
 ### Victor
 - Cyber-Security in the 6G Era: Emerging Threats, Multi-Layered Defense, and Future Directions  
