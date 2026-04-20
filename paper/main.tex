@@ -34,14 +34,18 @@
 %%% AUTHOR : Arda
 %%% -----------------------------------------------------
 \section{Introduction}
-6G is expected to support highly dynamic, intelligent, and large-scale wireless systems that go beyond the capabilities of previous generations. Unlike earlier network generations, 6G is being designed with artificial intelligence integrated into core decision-making processes, including optimization, orchestration, and autonomous control. This shift creates opportunities for higher efficiency and adaptability, but it also introduces new security risks because attackers can target both network infrastructure and the learning systems that influence network behavior.
+6G is expected to support highly dynamic, intelligent, and large-scale wireless systems that go beyond the capabilities of previous generations. Unlike earlier network generations, 6G is being designed with artificial intelligence integrated into core decision-making processes, including optimization, orchestration, and autonomous control. This shift creates opportunities for higher efficiency and adaptability, but it also introduces new security risks because attackers can target both network infrastructure and the learning systems that influence network behavior. As a result, security research for 6G increasingly focuses on the intersection of wireless networking, adversarial machine learning, trust management, and resilient system design.
+
+This paper reviews the main security threats facing AI-driven 6G systems and the defense strategies proposed across recent literature. We organize the discussion by first outlining background concepts, then reviewing adversarial threats and defenses, comparing major approaches, identifying gaps, and concluding with a proposed direction for more practical and robust 6G security.
 
 %%% -----------------------------------------------------
 %%% SECTION: Background
 %%% AUTHOR : Jodhveer
 %%% -----------------------------------------------------
 \section{Background}
-6G networks are expected to combine ultra-low latency, distributed intelligence, massive device connectivity, and open architectures such as O-RAN. In this context, AI is used to support tasks such as spectrum management, anomaly detection, network slicing, and autonomous radio control.
+6G networks are expected to combine ultra-low latency, distributed intelligence, massive device connectivity, and open architectures such as O-RAN. In this context, AI is used to support tasks such as spectrum management, anomaly detection, network slicing, and autonomous radio control. At the same time, adversarial machine learning studies how attackers can manipulate training data, input signals, or model behavior to reduce accuracy, extract sensitive information, or influence automated decisions.
+
+Federated learning is one example of an AI approach relevant to 6G because it allows multiple distributed nodes to collaboratively train models without sharing raw data. Although this can improve privacy and scalability, it also introduces risks such as poisoned local updates, dishonest participants, and inference attacks. Understanding these background concepts is necessary for evaluating how security threats evolve when machine learning becomes a core component of 6G systems.
 
 %%% -----------------------------------------------------
 %%% SECTION: Literature Review
@@ -50,34 +54,48 @@
 \section{Literature Review}
 
 \subsection{Adversarial ML Threats and Defenses in AI-Enabled 6G}
-% Khushi writes here.
+Recent research shows that artificial intelligence is becoming central to 6G because it helps future wireless networks adapt more quickly, automate decision-making, and manage increasingly complex environments \cite{bountakas2023,9964021}. At the same time, this shift expands the security problem: attackers can now target not only network infrastructure, but also the machine-learning models that guide network behavior. Broad adversarial machine learning surveys show that evasion and poisoning attacks remain major concerns, while 6G-focused studies argue that AI-enabled optimization introduces new risks in areas such as resource allocation, autonomous control, and distributed intelligence \cite{bountakas2023,9964021}. As a result, security in 6G must be studied as both a networking problem and a learning-system problem.
+
+This concern becomes more concrete in 6G-specific architectures that rely on distributed intelligence and open control frameworks. Xu, Su, and Li describe AI-enabled 6G using a space-air-ground-ocean integrated network architecture and federated learning models that support large-scale intelligent services while reducing raw-data sharing \cite{9964021}. However, they also show that this design introduces major threats including malicious cheating attacks, low-quality local model training attacks, and privacy-stealing attacks \cite{9964021}. Similar concerns appear in O-RAN-based cellular systems, where machine-learning xApps inside the near-real-time RAN Intelligent Controller can be manipulated through adversarial inputs, causing sharp drops in model accuracy unless robustness measures such as distillation are applied \cite{chiejina2024oran}. Together, these studies suggest that 6G defenses must be domain-aware, fast enough for operational deployment, and robust against attacks aimed directly at learning pipelines.
+
+Although existing work identifies important threats, the defense landscape is still fragmented. General adversarial machine learning surveys describe broad categories of proactive and reactive defenses, but these methods are often evaluated outside realistic wireless environments \cite{bountakas2023}. In contrast, wireless-focused studies propose more domain-specific protections for signal classifiers and AI-driven radio intelligence, yet they are usually tested in narrower settings \cite{sinha2023,chiejina2024oran}. Xu, Su, and Li partially bridge this gap by proposing a defense framework that combines trust evaluation, Q-learning-based incentives, and local differential privacy, but their solution is still presented as a case study rather than a general deployment-ready framework \cite{9964021}. This creates a gap between theory and deployment, because a defense that performs well in a controlled experiment may not remain effective under dynamic channel conditions, open-radio architectures, or latency-sensitive decision pipelines.
+
+Overall, the literature suggests that security for AI-driven 6G remains an open problem rather than a solved one. Current studies provide useful building blocks for robustness, poisoning resistance, and trust-aware design, but they do not yet offer a unified defense framework that is scalable, explainable, and practical for real-time 6G systems. This gap motivates the need for future work that combines adversarial robustness, secure distributed learning, and operationally realistic defense strategies.
 
 \subsection{Broader 6G Adversarial Risk Surveys}
-% Mary writes here.
+% Mary subsection goes here.
+% Add Mary's reviewed papers and synthesis here.
 
 \subsection{System-Level Threats, Multilayer Defense, and Secure Communication}
-% Victor writes here.
+% Victor subsection goes here.
+% Add Victor's reviewed papers and synthesis here.
 
 %%% -----------------------------------------------------
 %%% SECTION: Discussion
 %%% AUTHOR : Victor
 %%% -----------------------------------------------------
 \section{Discussion}
-The reviewed literature shows that AI improves the adaptability and automation of 6G systems, but also creates new security dependencies and new attack surfaces.
+The reviewed literature consistently shows that AI improves the adaptability and automation of 6G systems, but also creates new and more complex security dependencies. A recurring pattern across the surveyed papers is that many proposed defenses are effective only within narrow experimental settings, specific datasets, or simplified deployment assumptions. This makes it difficult to determine whether current approaches can support real 6G environments characterized by open-radio architectures, dynamic channels, latency constraints, and distributed model training.
+
+Another common gap is the lack of integration between adversarial robustness, privacy protection, and operational trust. Some papers focus mainly on poisoning resistance, while others address evasion robustness, trust scoring, or secure communication in isolation. A stronger research direction would connect these elements into a more unified security model for AI-enabled 6G.
 
 %%% -----------------------------------------------------
 %%% SECTION: Proposed Idea
 %%% AUTHOR : Jodhveer
 %%% -----------------------------------------------------
 \section{Proposed Idea}
-A promising direction for future 6G security is a layered defense framework that combines trust-aware federated learning, adversarially robust model training, runtime anomaly monitoring, and explainable response policies.
+A promising direction for future 6G security is a layered defense framework that combines trust-aware federated learning, adversarially robust model training, runtime anomaly monitoring, and explainable response policies. Instead of relying on a single defensive mechanism, this framework would protect the learning pipeline at multiple stages: validating local updates before aggregation, identifying suspicious behavior in real time, and using adaptive safeguards when model confidence or network conditions suggest elevated risk.
+
+Such a design would better match the realities of 6G, where AI systems must operate under strict latency requirements and in constantly changing wireless environments. A practical defense architecture should therefore be lightweight enough for deployment, transparent enough for operator trust, and flexible enough to respond to both network-level and model-level attacks.
 
 %%% -----------------------------------------------------
 %%% SECTION: Conclusion
 %%% AUTHOR : Mary
 %%% -----------------------------------------------------
 \section{Conclusion}
-The literature suggests that AI-driven 6G security remains an open problem and that future work must aim for more realistic and unified defense frameworks.
+This paper reviewed how the integration of AI into 6G networks creates both major opportunities and major security risks. The literature shows that adversarial attacks, poisoning, privacy leakage, and trust failures can significantly affect AI-enabled wireless systems, especially when decisions are made in real time and across distributed architectures. Existing defenses provide valuable ideas, but many remain fragmented or insufficiently validated for deployment-scale 6G settings.
+
+Future work should move toward unified defense strategies that are technically robust, operationally realistic, and explainable to network operators. As 6G continues to evolve, security will depend not only on protecting communication infrastructure, but also on protecting the intelligence embedded within it.
 
 \bibliographystyle{aaai}
 \bibliography{references}
