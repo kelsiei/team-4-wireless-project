@@ -168,6 +168,14 @@ A significant portion of our analysis is dedicated to emerging defense framework
 
 The shift from 5G to 6G represents a significant evolution in how global connectivity is designed. While 5G improved throughput, latency, and network virtualization, 6G aims to extend connectivity across integrated terrestrial, aerial, and satellite networks to enable three-dimensional coverage \cite{kaur2025}. By linking ground infrastructure with non-terrestrial systems, 6G seeks to reduce connectivity gaps across geographic regions. This architecture allows devices to dynamically transition between terrestrial towers and satellite systems. Research visions for 6G propose peak data rates approaching 1 Tbps and support for up to $10^6$ IoT devices per $\text{km}^2$ \cite{kaur2025}.
 
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.92\textwidth]{images/fig1_6g_architecture.png}
+    \caption{AI-enabled 6G network architecture. Each tier integrates AI components for orchestration, radio intelligence, access, and device operation, and each tier exposes a distinct attack surface.}
+    \label{fig:6g-architecture}
+\end{figure*}
+
 To support networks of this scale, the telecommunications industry is moving toward Open Radio Access Network (O-RAN) architectures. Traditionally, network hardware and software were tightly coupled and typically supplied by a single vendor. O-RAN introduces standardized interfaces that allow operators to deploy interoperable components from multiple vendors, increasing flexibility while also introducing new security considerations \cite{kaur2025}. Within this architecture, artificial intelligence assists network management through the RAN Intelligent Controller (RIC). Near-real-time applications called xApps handle short-term operational tasks such as signal optimization, while rApps support longer-term network management and policy decisions.
 
 \subsection{AML Threats in AI-Driven Networks}
@@ -252,6 +260,14 @@ Overall, the literature suggests that security for AI-driven 6G remains an open 
 Since 6G networks are so complex, researchers have largely moved away from the idea that any single security technology can protect them fully. Kumar et al. (2026) argues that the right approach is to stack complementary mechanisms across different levels of the network so that weaknesses in one layered are covered by strengths in another. Their proposed framework organizes these mechanisms into three logical tiers: a foundational 6G infrastructure layer, an AI enabled security layer and an application and service layer, that has real time data flows with a AI powered decision loops connecting each tier. At the lowest level, physical layer security (PLS) exploits the natural properties of wireless channels, things like noise and signal fading which are used to protect transmissions without relying on traditional encryption. This makes it computionally cheap and naturally resistant to quantum attacks, but it cannot handle threats that originate higher up in the network like malware or poisoned training data. Moving up the stack, Distributed Ledger Technologies (DLT) addresses the need for trustworthy record keeping, providing temper evident logs of network activity that are particularly useful for identity management, though consensus latency makes it unsuitable for ultra low latency applications. Tying these layers together, distributed and federated AI/ML serves as what they call the unifying enabler across all other technologies, capable of detecting anomalies, predicting threats and orchestrating adaptive responses in real time. They back this up with evidence from the paper, pointing to hybrid CNN-LSTM intrusion detection models that achieve roughly 97-99\% detection accuracy on benchmark datasets, while reinforcement learning based can isolate compromised networks slices in sub-second time. To ground the whole framework into something practical, Kumar et al. walk through the examples of EV charging infrastructure in a smart city, showing how physical layer federated detection can all work together in a single deployment. The takeaway is that layered defense in 6G is less about picking the best technology and more about understanding how different tools complement each other across the network stack.
 
 
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.92\textwidth]{images/fig4_oran_xapp.png}
+    \caption{O-RAN architecture with emphasis on the xApp attack surface. Adversarial inputs to xApps in the Near-RT RIC can degrade model accuracy; mitigations include model distillation, robust training, and runtime input validation.}
+    \label{fig:oran-xapp}
+\end{figure*}
+
+
 %%% -----------------------------------------------------
 %%% SECTION : Literature Review
 %%% AUTHOR  : Mary (@MustangKoschei)
@@ -308,6 +324,14 @@ Overall, the field lacks a unified defense framework that is simultaneously scal
 
 Existing defenses are largely perimeter-based and focus on detecting threats at the network entry point. However, this creates a single point of failure, as attacks that bypass initial detection can directly impact AI-driven decision making. Given the distributed and software-based nature of 6G systems, a lifecycle-based defense approach is needed to protect AI across all stages of operation rather than relying on a single checkpoint \cite{Chen_Zhang_Zhang_Wang_Liu_2021}.
 
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.92\textwidth]{images/fig5_layered_defense.png}
+    \caption{Proposed layered defense framework. Trust-aware federated learning, adversarially robust training, runtime anomaly monitoring, and explainable response policies combine into a lightweight, transparent, and adaptive defense suited to latency-sensitive 6G systems.}
+    \label{fig:layered-defense}
+\end{figure*}
+
 \subsection {Three Phase Defense}
 
 This section proposes a layered framework that secures 6G AI systems across three stages: data, language model, and decision making.
@@ -346,7 +370,6 @@ The transition to 6G marks a fundamental shift from human-managed connectivity t
 The research highlights that 6G-specific architectures are vulnerable to AML tactics that can have physical consequences. These risks include adversarial beam manipulation in the physical layer, and "clean-label" poisoning attacks, which can subtly alter model logic while appearing legitimate to human reviewers. These threats are particularly notable in O-RAN environments, where the Near-Real-Time RIC and its associated xApps serve as high-risk targets for adversarial manipulation\cite{Catak_Catak_Moldsvor_2021}.
 To address these risks, this paper proposes a lifecycle-based Three Phase Defense framework. This includes targeting the data, the model, and the decisions it produces. First by securing the data by filtering out poisoned inputs before they reach the model. Next, securing the AI by utilizing adversarial training and stress-testing to ensure models remain robust against evasion attacks during real-time operation. And finally, securing the decisions by using ZTA with Explainable AI techniques like SHAP and LIME to provide the transparency needed for continuous verification and auditing\cite{Kumar_Dutta_Vamsi_Sankararao_Varri_Puthal_2026}.
 Significant challenges remain regarding the computational overhead and processing latency introduced by these complex AI defenses\cite{Chen_Zhang_Zhang_Wang_Liu_2021}. Many current solutions remain theoretical and have yet to be validated against the dynamic channel conditions of real-world 6G deployments. Addressing these gaps remains essential to realizing the vision of a resilient, self-healing, and secure 6G network.
-
 
 
 \bibliography{references}
